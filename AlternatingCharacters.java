@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/challenges/alternating-characters/problem
 public class AlternatingCharacters {
 
     public static int count(String str) {

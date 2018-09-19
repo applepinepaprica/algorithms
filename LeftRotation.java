@@ -1,6 +1,7 @@
 import org.junit.Test;
 import java.util.Arrays;
 
+//https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
 public class LeftRotation {
 
     public static int[] rotation (int[] array, int d) {
