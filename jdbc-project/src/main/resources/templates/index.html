@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<title id="pageTitle">Test for CDEK</title>
+<link rel="stylesheet" href="/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<div class="container">
+		<form action="#" th:action="@{/addLine}" th:object="${line}" method="post">
+			<p>
+				<input type="text" th:field="*{value}" class="form-control" placeholder="Name" required="true" autofocus="true" maxlength="5000" />
+			</p>
+			<p>		
+				<input type="submit" class="btn btn-primary" value="Submit" />
+			</p>
+		</form>
+	</div>
+	<div class="container">
+		<form action="#" th:action="@{/}" th:object="${searchLine}" method="get">
+			<p>
+				<input type="number" th:field="*{id}" class="form-control" placeholder="Id" maxlength="5000" />
+			</p>
+			<p>
+				<input type="text" th:field="*{value}" class="form-control" placeholder="Value" maxlength="5000" />
+			</p>
+			<p>		
+				<input type="submit" class="btn btn-primary" value="Search" />
+			</p>
+		</form>
+	</div>
+	<div class="container">
+		<form action="/">
+			<p>		
+				<input type="submit" class="btn btn-primary" value="Show all" />
+			</p>
+		</form>
+	</div>
+	<div class="container" th:if="${not #lists.isEmpty(lines)}">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="line : ${lines}">
+					<th scope="row" th:text="${line.id}" />
+					<td th:text="${line.value}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="container" th:if="${#lists.isEmpty(lines)}">
+		<h2>There is nothing to show</h2>
+	</div>
+</body>
+</html>
