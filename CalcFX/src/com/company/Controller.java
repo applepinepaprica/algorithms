@@ -15,7 +15,12 @@ public class Controller {
     }
 
     public void Result(ActionEvent actionEvent) {
-        label.setText(Calc.Calc(label.getText()));
+        try {
+            double result= Calc.Calc(label.getText());
+            label.setText(Double.toString(result));
+        } catch (ParsException e) {
+            label.setText("Error");
+        }
     }
 
     public void deleteLast(ActionEvent actionEvent) {

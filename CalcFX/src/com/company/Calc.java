@@ -4,15 +4,9 @@ class Calc {
 
     private static int pointer;
 
-    static String Calc(String str){
+    static double Calc(String str){
         pointer = 0;
-        char[] array = str.toCharArray();
-
-        try {
-            return Double.toString(Count(array));
-        } catch (ParsException e){
-            return "Error";
-        }
+        return Count(str.toCharArray());
     }
 
     private static double Count(char[] array){
