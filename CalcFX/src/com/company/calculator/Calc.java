@@ -1,14 +1,30 @@
-package com.company;
+package com.company.calculator;
 
-class Calc {
+/**
+ * Класс со статическими методами для вычисления арифметического выражения
+ */
+public class Calc {
 
+    /**
+     * Указатель на текущий символ в массиве
+     */
     private static int pointer;
 
-    static double Calc(String str){
+    /**
+     * Находит результат арифметического выражения
+     * @param str арифметическое выражение
+     * @return результат
+     */
+    public static double Calc(String str){
         pointer = 0;
         return Count(str.toCharArray());
     }
 
+    /**
+     * Функция. которая выполняет арифметические действия
+     * @param array массив символов
+     * @return результат
+     */
     private static double Count(char[] array){
         double result = 0;
 
@@ -58,6 +74,11 @@ class Calc {
         return result;
     }
 
+    /**
+     * Парсит массив символов и возвращает число, соотвествующее массиву
+     * @param array массив символов
+     * @return число
+     */
     private static double Pars(char[] array) {
        StringBuilder s = new StringBuilder();
 
