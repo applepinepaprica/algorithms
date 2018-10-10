@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class Controller {
+
     /**
      * Label для ввода арифметического выражения и вывода результата
      */
@@ -16,18 +17,20 @@ public class Controller {
      * Добавляет символ в поле для ввода выражения
      * Символ соотвествует надписи на кнопке
      */
-    public void AddChar(ActionEvent actionEvent) {
-        if (label.getText().equals("Error"))
+    public void addChar(ActionEvent actionEvent) {
+        if (label.getText().equals("Error")) {
             label.setText("");
-        label.setText(label.getText() + ((Button)actionEvent.getTarget()).getText());
+        }
+
+        label.setText(label.getText() + ((Button) actionEvent.getTarget()).getText());
     }
 
     /**
      * Высчитывает результат арифметического выражения, введеного в поле для ввода, и выводит в то же поле
      */
-    public void Result(ActionEvent actionEvent) {
+    public void result(ActionEvent actionEvent) {
         try {
-            double result= Calc.Calc(label.getText());
+            double result = Calc.calc(label.getText());
             label.setText(Double.toString(result));
         } catch (ParsException e) {
             label.setText("Error");

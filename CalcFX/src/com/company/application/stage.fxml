@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
@@ -11,20 +12,20 @@
     <Label fx:id="label" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="4"/>
     <Button text="B" onAction="#deleteLast" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
     <Button text="D" onAction="#deleteAll" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-    <Button text="0" onAction="#AddChar" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-    <Button text="1" onAction="#AddChar" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-    <Button text="2" onAction="#AddChar" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-    <Button text="3" onAction="#AddChar" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
-    <Button text="4" onAction="#AddChar" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <Button text="5" onAction="#AddChar" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-    <Button text="6" onAction="#AddChar" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
-    <Button text="7" onAction="#AddChar" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <Button text="8" onAction="#AddChar" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <Button text="9" onAction="#AddChar" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-    <Button text="/" onAction="#AddChar" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
-    <Button text="*" onAction="#AddChar" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
-    <Button text="-" onAction="#AddChar" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
-    <Button text="+" onAction="#AddChar" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
-    <Button text="." onAction="#AddChar" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-    <Button text="=" onAction="#Result" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+    <Button text="0" onAction="#addChar" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Button text="1" onAction="#addChar" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Button text="2" onAction="#addChar" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button text="3" onAction="#addChar" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+    <Button text="4" onAction="#addChar" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Button text="5" onAction="#addChar" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button text="6" onAction="#addChar" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <Button text="7" onAction="#addChar" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Button text="8" onAction="#addChar" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button text="9" onAction="#addChar" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button text="/" onAction="#addChar" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <Button text="*" onAction="#addChar" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    <Button text="-" onAction="#addChar" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+    <Button text="+" onAction="#addChar" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+    <Button text="." onAction="#addChar" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button text="=" onAction="#result" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
 </GridPane>
