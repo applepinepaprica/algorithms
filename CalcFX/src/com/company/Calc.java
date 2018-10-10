@@ -1,29 +1,17 @@
 package com.company;
 
 class Calc {
+
     private static int pointer;
 
-    private static double Pars(char[] array) {
-       StringBuilder s = new StringBuilder();
+    static String Calc(String str){
+        pointer = 0;
+        char[] array = str.toCharArray();
 
-        for (; pointer < array.length; pointer++) {
-
-            if (Character.isDigit(array[pointer]) || array[pointer] == '.') {
-
-                s.append(array[pointer]);
-
-            } else {
-
-                pointer--;
-                break;
-
-            }
-        }
-
-        try{
-            return Double.parseDouble(s.toString());
-        } catch (NumberFormatException e){
-            throw new ParsException();
+        try {
+            return Double.toString(Count(array));
+        } catch (ParsException e){
+            return "Error";
         }
     }
 
@@ -76,13 +64,27 @@ class Calc {
         return result;
     }
 
-    static String Calc(String str){
-        pointer = 0;
-        char[] array = str.toCharArray();
-        try {
-            return Double.toString(Count(array));
-        } catch (ParsException e){
-            return "Error";
+    private static double Pars(char[] array) {
+       StringBuilder s = new StringBuilder();
+
+        for (; pointer < array.length; pointer++) {
+
+            if (Character.isDigit(array[pointer]) || array[pointer] == '.') {
+
+                s.append(array[pointer]);
+
+            } else {
+
+                pointer--;
+                break;
+
+            }
+        }
+
+        try{
+            return Double.parseDouble(s.toString());
+        } catch (NumberFormatException e){
+            throw new ParsException();
         }
     }
 }
