@@ -28,6 +28,8 @@ public class Main {
         //Assert throws ParsException
         assertThrowsParsEx("133+3×5+4÷555-6+44×1000");
         assertThrowsParsEx("22 +22*22-22/22");
+
+        System.out.println("All tests are passed!");
     }
 
     private static void assertThrowsParsEx(String s){
