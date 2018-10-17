@@ -68,6 +68,12 @@ public class CalcTest {
         assertThrowsParsEx("22 +22*22-22/22");
     }
 
+    @Test
+    public void brackets() {
+        assert Calc.calc("(2*3)+2") == 8.0;
+        assert Calc.calc("(2+2+2)*2") == 8.0;
+    }
+
     /**
      * Проверяет, выбрасывается ли исключении при некорректном вводе
      *

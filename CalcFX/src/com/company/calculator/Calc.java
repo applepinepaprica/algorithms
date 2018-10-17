@@ -34,8 +34,8 @@ public class Calc {
 
             if (Character.isDigit(array[pointer])) {
                 result = pars(array);
-
             } else {
+
                 if (pointer == 0) {
                     throw new ParsException();
                 }
